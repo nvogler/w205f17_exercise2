@@ -10,10 +10,10 @@ from streamparse.spout import Spout
 # Twitter credentials
 ################################################################################
 twitter_credentials = {
-    "consumer_key"        :  "<enter your consumer key>",
-    "consumer_secret"     :  "<enter your consumer secret key>",
-    "access_token"        :  "<enter your access token>",
-    "access_token_secret" :  "<enter your access token secret key>",
+    "consumer_key"        :  "Ri50XuGGtjLVsBP1EI8fER5Xh",
+    "consumer_secret"     :  "GTGS9NZYBrE6qAf3UXEsDnr3joINoV4tzdZV9Add2SzL6tQkTD",
+    "access_token"        :  "934876405313175559-JTWHtME2SlFWHEC1W3auuovuFlTx00t",
+    "access_token_secret" :  "uyLILWftou4EDQIBJ4GzcJeIhRVcyukqTAKwGndhGaxZO",
 }
 
 def auth_get(auth_key):
@@ -78,7 +78,7 @@ class Tweets(Spout):
  
         except Queue.Empty:
             self.log("Empty queue exception ")
-            time.sleep(0.1) 
+            time.sleep(0.5) 
 
     def ack(self, tup_id):
         pass  # if a tuple is processed properly, do nothing
