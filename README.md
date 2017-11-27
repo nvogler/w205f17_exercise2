@@ -1,7 +1,11 @@
-Exercise 2
+# End-to-End Twitter Stream Processing Application
+
+Through the use of X, Y, and Z, this application captures and stores all text contained in tweets while the listener is running. Two serving layer applications are available to analyze total traffic, data on specific words, or data on occurrence ranges.
+Apache Storm  
+
 
 Submission Instructions
-
+ 
 General guidelines:
 
 DONE - All code outlined above must be committed and pushed to your GitHub repository.
