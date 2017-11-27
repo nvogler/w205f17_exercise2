@@ -27,9 +27,9 @@ conn = psycopg2.connect(database="tcount", user="postgres", password="pass", hos
 #The first step is to create a cursor. 
 
 cur = conn.cursor()
-cur.execute('''CREATE TABLE tweetwordcount
-       (word TEXT PRIMARY KEY     NOT NULL,
-       count INT     NOT NULL);''')
+#cur.execute('''CREATE TABLE tweetwordcount
+#       (word TEXT PRIMARY KEY     NOT NULL,
+#       count INT     NOT NULL);''')
 conn.commit()
 
 

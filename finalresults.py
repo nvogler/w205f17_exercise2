@@ -17,10 +17,10 @@ if len(sys.argv) == 1:
 	cur.execute("SELECT word, count FROM tweetwordcount")
 	results = cur.fetchall()
 	for result in results:
-		print ("(" + str(result[0]) + ", " + str(result[1]) + ")\n")
+		print ("(" + str(result[0]) + ", " + str(result[1]) + ")")
 ## Pull single entry	
 else:
-	word = sys.argv[1]
+	word = sys.argv[1].lower().decode('utf-8')
 	cur.execute("SELECT word, count FROM tweetwordcount WHERE word=%s", (word,))
 	count = cur.fetchone()
 	if count:

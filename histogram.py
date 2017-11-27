@@ -22,4 +22,4 @@ cur.execute(query)
 # Display results
 results = cur.fetchall()
 for result in results:
-	print (str(result[0]) + ": " + str(result[1]) + "\n")
+	print (str(result[0]) + ": " + str(result[1]))
