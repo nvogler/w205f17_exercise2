@@ -24,32 +24,29 @@ class WordCounter(Bolt):
                 print ("Count not create tcount")
 
         # Connect to tcount
-        conn = psycopg2.connect(database="tcount", user="postgres")
+        self.conn = psycopg2.connect(database="tcount", user="postgres")
 
         # Create table
-        cur = conn.cursor()
-        cur.execute('''DROP TABLE IF EXISTS tweetwordcount;''')
-	cur.execute('''CREATE TABLE tweetwordcount (word TEXT PRIMARY KEY  NOT NULL, \
+        self.cur = self.conn.cursor()
+        self.cur.execute('''DROP TABLE IF EXISTS tweetwordcount;''')
+	self.cur.execute('''CREATE TABLE tweetwordcount (word TEXT PRIMARY KEY  NOT NULL, \
                 count INT       NOT NULL);''')
-        conn.commit()
+        self.conn.commit()
 
     def process(self, tup):
-        word = tup.values[0]
-
-	# Connect to tcount
-        conn = psycopg2.connect(database="tcount", user="postgres")
-        cur = conn.cursor()
-	
+        word = tup.values[0].lower().decode('utf-8')
+		
 	## Check prior word appearance
         if self.counts[word] != 0:
                 # Update database
-                cur.execute("UPDATE tweetwordcount SET count=%s WHERE word=%s", \
+                self.cur.execute("UPDATE tweetwordcount SET count=%s WHERE word=%s", \
                         (self.counts[word], word))
 	else:
 		# Update database
-                cur.execute("INSERT INTO tweetwordcount (word, count) \
+                self.cur.execute("INSERT INTO tweetwordcount (word, count) \
                         VALUES (%s, %s)", (word, "1"))
-
+	self.conn.commit()
+	
 	# Increment the local count
         self.counts[word] += 1
         self.emit([word, self.counts[word]])
