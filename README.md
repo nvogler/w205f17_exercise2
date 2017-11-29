@@ -12,32 +12,38 @@ Create and mount an EBS volume as /data, as outlied by the page below:
   o	https://github.com/UC-Berkeley-I-School/w205-fall-17-labs-exercises/blob/master/lab_2/Lab2.md  
   
 Install PsycoPG:  
-  o	pip install psycopg2==2.6.2  
-  
-Install Tweepy:  
-  o	pip install tweepy  
-   
+```
+$ pip install psycopg2==2.6.2  
+```
+Install Tweepy:
+```
+$ pip install tweepy  
+``` 
 Switch to the w205 user:  
-  o	su - w205
-
+```
+$ su - w205
+```  
 Clone this repository:  
-  o	git clone https://github.com/nvogler/w205f17_exercise2.git  
-  o	cd w205f17_exercise2
-
+```
+$ git clone https://github.com/nvogler/w205f17_exercise2.git  
+$ cd w205f17_exercise2
+```
 ## Usage (screenshots available in /screencaps)  
 Move into the extweetwordcount directory and run the listener:  
-  o	cd extweetwordcount  
-  o sparse run
-  
+```
+$ cd extweetwordcount  
+$ sparse run
+```
 Wait a minute or two while tweets are captured before stopping the listener:  
   o Press <Ctrl>+<C>  
 
 Move back to the main directory and try out the analysis applications:  
-  o	cd ..  
-  o	python finalresults.py  
-  o	python finalresults.py trump  
-  o	python histrogram.py 5,10  
-
+```
+$ cd ..  
+$ python finalresults.py  
+$ python finalresults.py trump  
+$ python histrogram.py 5,10  
+```
 TODO
 Screenshots demonstrating end-to-end execution of the application are available in the screenshots directory.
 
