@@ -28,7 +28,7 @@ Clone this repository:
 $ git clone https://github.com/nvogler/w205f17_exercise2.git  
 $ cd w205f17_exercise2
 ```
-## Usage (screenshots available in /screencaps)  
+## Usage (screenshots available in /screenshots)  
 Move into the extweetwordcount directory and run the listener:  
 ```
 $ cd extweetwordcount  
