@@ -35,7 +35,7 @@ $ cd extweetwordcount
 $ sparse run
 ```
 Wait a minute or two while tweets are captured before stopping the listener:  
-  o Press <Ctrl>+<C>  
+  o Press  Ctrl + C   
 
 Move back to the main directory and try out the analysis applications:  
 ```
