@@ -44,7 +44,4 @@ $ python finalresults.py
 $ python finalresults.py trump  
 $ python histrogram.py 5,10  
 ```
-TODO
-Screenshots demonstrating end-to-end execution of the application are available in the screenshots directory.
 
-TODO - Plot.png: a bar chart, generated however you prefer, that shows the top 20 words in your Twitter stream.
